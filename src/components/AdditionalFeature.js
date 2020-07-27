@@ -15,12 +15,6 @@ const AdditionalFeature = props => {
   );
 };
 
-// const mapStateToProps = state => {
-//   return {
-//     state: state
-//   }
-// }
-
 export default connect(
   null,
   { addFeature }
