@@ -19,12 +19,36 @@ const initialState = {
 };
 
 export const reducer = (state = initialState, action) => {
-    console.log(action.type)
+    // console.log(action.type)
     switch(action.type) {
         case ADD_FEATURE :
-            return console.log(action.type, action.payload)
-        case REMOVE_FEATURE : 
-            return console.log('inside the REMOVE_FEATURE')
+            console.log(action.type, action.payload)
+            return {
+                ...state,
+                additionalPrice: state.additionalPrice + action.payload.price,
+                car: {
+                    ...state.car,
+                    features: 
+                    [
+                        ...state.car.features,
+                        action.payload
+                    ]
+                }
+            }
+        case REMOVE_FEATURE :
+            return {
+                ...state,
+                car: {
+                    ...state.car,
+                    price: state.car.price - action.payload.price,
+                    features: state.car.features.filter(item => {
+                        if(item.name !== action.payload.name){
+                            return item
+                        }
+                        return false
+                    })
+                }
+            }
         case CALC_TOTAL :  
             return console.log('inside the CALC_TOTAL')
         default:

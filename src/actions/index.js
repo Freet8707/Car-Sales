@@ -3,7 +3,6 @@ export const REMOVE_FEATURE = 'REMOVE_FEATURE'
 export const CALC_TOTAL = 'CALC_TOTAL'
 
 export const addFeature = feature => {
-    console.log('inside the add feature action', feature)
     return {
         type: ADD_FEATURE,
         payload: feature
