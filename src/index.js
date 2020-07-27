@@ -7,9 +7,8 @@ import App from './App';
 import 'bulma/css/bulma.css';
 import './styles.scss';
 
-const reducer = state => {
-    return {}
-}
+import { reducer } from './reducers'
+
 
 const store = createStore(reducer)
 
