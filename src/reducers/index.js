@@ -19,9 +19,10 @@ const initialState = {
 };
 
 export const reducer = (state = initialState, action) => {
+    console.log(action.type)
     switch(action.type) {
-        case ADD_FEATURE : 
-            return console.log('inside the ADD_FEATURE')
+        case ADD_FEATURE :
+            return console.log(action.type, action.payload)
         case REMOVE_FEATURE : 
             return console.log('inside the REMOVE_FEATURE')
         case CALC_TOTAL :  
