@@ -1,5 +1,5 @@
 
-import { ADD_FEATURE, REMOVE_FEATURE, CALC_TOTAL } from '../actions'
+import { ADD_FEATURE, REMOVE_FEATURE } from '../actions'
 
 const initialState = {
     additionalPrice: 0,
@@ -50,8 +50,6 @@ export const reducer = (state = initialState, action) => {
                     })
                 }
             }
-        case CALC_TOTAL :  
-            return console.log('inside the CALC_TOTAL')
         default:
             return state
     }
